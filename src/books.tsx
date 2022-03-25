@@ -24,27 +24,13 @@ export default function Command() {
         <List.Dropdown tooltip="Search Options" onChange={refetch} value="">
           <List.Dropdown.Section title="Page Navigation">
             <List.Dropdown.Item title={"-"} value={""} />
-            {data?.previous && (
-              <List.Dropdown.Item
-                title={"Previous Page"}
-                value={getUrlParamsString(data.previous)}
-              />
-            )}
-            {data?.next && (
-              <List.Dropdown.Item
-                title={"Next Page"}
-                value={getUrlParamsString(data.next)}
-              />
-            )}
+            {data?.previous && <List.Dropdown.Item title={"Previous Page"} value={getUrlParamsString(data.previous)} />}
+            {data?.next && <List.Dropdown.Item title={"Next Page"} value={getUrlParamsString(data.next)} />}
           </List.Dropdown.Section>
 
           <List.Dropdown.Section title="Highlight Category">
             {CATEGORIES.map(({ label, category }) => (
-              <List.Dropdown.Item
-                key={category}
-                title={label}
-                value={"category=" + category}
-              />
+              <List.Dropdown.Item key={category} title={label} value={`category=${category}`} />
             ))}
           </List.Dropdown.Section>
         </List.Dropdown>

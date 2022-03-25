@@ -13,10 +13,7 @@ export function useHighlights() {
     page_size: pageSize,
   });
 
-  const { data, error, isValidating } = useSWR<HighlightsRequest, HTTPError>(
-    ["/v2/highlights", params],
-    fetchReadwise
-  );
+  const { data, error, isValidating } = useSWR<HighlightsRequest, HTTPError>(["/v2/highlights", params], fetchReadwise);
 
   useHandleError(error);
 

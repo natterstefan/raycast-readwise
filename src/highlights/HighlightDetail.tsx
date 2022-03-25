@@ -6,11 +6,7 @@ export const HighlightDetail = ({ item }: { item: Highlight }) => {
     <Detail
       actions={
         <ActionPanel>
-          <Action.CopyToClipboard
-            title="Copy Text"
-            content={item.text}
-            shortcut={{ modifiers: ["cmd"], key: "." }}
-          />
+          <Action.CopyToClipboard title="Copy Text" content={item.text} shortcut={{ modifiers: ["cmd"], key: "." }} />
         </ActionPanel>
       }
       navigationTitle={"Highlight"}
@@ -18,15 +14,9 @@ export const HighlightDetail = ({ item }: { item: Highlight }) => {
         <Detail.Metadata>
           <Detail.Metadata.Label
             title="Highlighted At"
-            text={formatDate(
-              new Date(item.highlighted_at),
-              "MMMM dd, yyyy hh:mm"
-            )}
+            text={formatDate(new Date(item.highlighted_at), "MMMM dd, yyyy hh:mm")}
           />
-          <Detail.Metadata.Label
-            title="Updated At"
-            text={formatDate(new Date(item.updated), "MMMM dd, yyyy hh:mm")}
-          />
+          <Detail.Metadata.Label title="Updated At" text={formatDate(new Date(item.updated), "MMMM dd, yyyy hh:mm")} />
           {item.tags.length > 0 && (
             <Detail.Metadata.TagList title="Tag">
               {item.tags.map((tag) => (

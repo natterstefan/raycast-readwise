@@ -14,15 +14,8 @@ export default function Command() {
         <List.Dropdown tooltip="Search Options" onChange={refetch} value="">
           <List.Dropdown.Section title="Page Navigation">
             <List.Dropdown.Item title={"Choose Pagination"} value={""} />
-            {data?.previous && (
-              <List.Dropdown.Item
-                title={"Previous Page"}
-                value={data.previous}
-              />
-            )}
-            {data?.next && (
-              <List.Dropdown.Item title={"Next Page"} value={data.next} />
-            )}
+            {data?.previous && <List.Dropdown.Item title={"Previous Page"} value={data.previous} />}
+            {data?.next && <List.Dropdown.Item title={"Next Page"} value={data.next} />}
           </List.Dropdown.Section>
         </List.Dropdown>
       }

@@ -10,10 +10,7 @@ export const BooksList = ({ item }: { item: Book }) => {
       actions={
         <ActionPanel>
           <ActionPanel.Section>
-            <Action.OpenInBrowser
-              title="Open in Browser"
-              url={"https://readwise.io/bookreview/" + item.id}
-            />
+            <Action.OpenInBrowser title="Open in Browser" url={`https://readwise.io/bookreview/${item.id}`} />
           </ActionPanel.Section>
         </ActionPanel>
       }

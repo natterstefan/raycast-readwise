@@ -12,14 +12,8 @@ const options = {
   },
 };
 
-export const fetchReadwise = async <Result, Params>(
-  url: string,
-  params: Params
-): Promise<Result> => {
-  const response = await fetch(
-    "https://readwise.io/api" + url + "?" + queryString.stringify(params),
-    options
-  );
+export const fetchReadwise = async <Result, Params>(url: string, params: Params): Promise<Result> => {
+  const response = await fetch(`https://readwise.io/api${url}?${queryString.stringify(params)}`, options);
 
   const json = (await response.json()) as Result;
 
