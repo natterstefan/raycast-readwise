@@ -10,7 +10,6 @@ const CATEGORIES: { label: string; category: Category }[] = [
   { label: "Book", category: "books" },
   { label: "Podcasts", category: "podcasts" },
   { label: "Supplementals", category: "supplementals" },
-  // { label: "Tweets", category: "tweets" },
 ];
 
 export default function Command() {

@@ -4,6 +4,5 @@ interface Tag {
 }
 
 interface HTTPError {
-  info: string;
   status: number;
 }

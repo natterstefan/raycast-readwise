@@ -15,7 +15,6 @@ export function useBooks() {
   const [params, setParams] = useState<BookParameters>(DEFAULT_PARAMS);
 
   const { data, error, isValidating } = useSWR<BookResponse, HTTPError>(["/v2/books", params], fetchReadwise);
-
   useHandleError(error);
 
   return {

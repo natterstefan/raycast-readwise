@@ -2,7 +2,7 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "readwise",
   "title": "Readwise",
-  "description": "Browser your Readwise library easily and quickly.",
+  "description": "Search and browser your Readwise Library.",
   "icon": "icon.png",
   "author": "natterstefan",
   "categories": [

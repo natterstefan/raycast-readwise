@@ -14,7 +14,6 @@ export function useHighlights() {
   });
 
   const { data, error, isValidating } = useSWR<HighlightsRequest, HTTPError>(["/v2/highlights", params], fetchReadwise);
-
   useHandleError(error);
 
   return {

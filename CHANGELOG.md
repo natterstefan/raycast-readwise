@@ -4,4 +4,4 @@
 
 ### Features
 
-- Public release with highlights and library search
+- Initial release with highlights and library search

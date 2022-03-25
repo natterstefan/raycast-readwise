@@ -18,11 +18,9 @@ export const fetchReadwise = async <Result, Params>(url: string, params: Params)
   const json = (await response.json()) as Result;
 
   if (!response.ok) {
-    // inspired by https://swr.vercel.app/docs/error-handling
     const error = new Error("An error occurred while fetching the data.");
+    // inspired by https://swr.vercel.app/docs/error-handling
     // Attach extra info to the error object.
-    // @ts-expect-error extend Error type
-    error.info = await json;
     // @ts-expect-error extend Error type
     error.status = response.status;
     throw error;

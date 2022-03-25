@@ -11,7 +11,7 @@ export const useHandleError = (error?: HTTPError) => {
           "Please, validate your Readwise API token is correct and you added one."
         );
       } else {
-        throw error;
+        showToast(Toast.Style.Failure, "Something went wrong.", "Please, try it again.");
       }
     }
   }, [error]);

@@ -27,9 +27,9 @@ interface Book {
   updated: string;
   cover_image_url: string;
   highlights_url: string;
-  source_url: null;
-  asin: string;
-  tags: Tag;
+  source_url: string | null;
+  asin: string | null;
+  tags: Tag[];
 }
 
 interface BookResponse {
